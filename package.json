@@ -1,7 +1,7 @@
 {
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "vitepress build docs && echo 'www.lhsen.com' > docs/.vitepress/dist/CNAME",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
