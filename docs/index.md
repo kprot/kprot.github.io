@@ -8,10 +8,10 @@ hero:
   tagline: 思考是人类最大的乐趣
   actions:
     - theme: brand
-      text: 写作例子
+      text: 关于
       link: /markdown-examples
     - theme: alt
-      text: 接口例子
+      text: 文章
       link: /api-examples
 
 features:

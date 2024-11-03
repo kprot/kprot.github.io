@@ -8,18 +8,26 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: '写作例子', link: '/markdown-examples' }
+      { text: '关于', link: '/markdown-examples' },
+      { text: '文章', link: '/api-examples' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '导航',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '关于', link: '/markdown-examples' },
+          { text: '文章', link: '/api-examples' }
         ]
       }
     ],
+    footer: {
+      message: '思考，快与慢',
+      copyright: 'Copyright © 2024 LHS'
+    },
+    search: {
+      provider: 'local'
+    }
 
     // socialLinks: [
     //   { icon: 'x', link: 'https://github.com/vuejs/vitepress' }
