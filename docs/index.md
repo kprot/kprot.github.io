@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "思考，快与慢"
   text: ""
-  tagline: 让我们开始吧
+  tagline: 思考是人类最大的乐趣
   actions:
     - theme: brand
       text: 写作例子
