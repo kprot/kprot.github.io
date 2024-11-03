@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Think, fast and slow",
-  description: "Think, fast and slow",
+  title: "思考，快与慢",
+  description: "思考，快与慢",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '主页', link: '/' },
+      { text: '写作例子', link: '/markdown-examples' }
     ],
 
     sidebar: [
@@ -21,8 +21,8 @@ export default defineConfig({
       }
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    // socialLinks: [
+    //   { icon: 'x', link: 'https://github.com/vuejs/vitepress' }
+    // ]
   }
 })

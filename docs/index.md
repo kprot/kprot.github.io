@@ -3,23 +3,23 @@
 layout: home
 
 hero:
-  name: "Think, fast and slow"
-  text: "Think, fast and slow"
-  tagline: My great project tagline
+  name: "思考，快与慢"
+  text: ""
+  tagline: 让我们开始吧
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 写作例子
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: 接口例子
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 生活
+    details: 你想要什么生活方式？
+  - title: 事业
+    details: 你喜欢追求什么事业？
+  - title: 理想
+    details: 你还有理想吗？
 ---
 
