@@ -39,9 +39,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          #cache-dependency-path: docs/.vitepress/cache/deps/package-lock.json
           node-version: 20
-          #cache: npm # or pnpm / yarn
+          cache: npm # or pnpm / yarn
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
