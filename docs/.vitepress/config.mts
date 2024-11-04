@@ -2,9 +2,20 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head: [['link', { rel: 'icon', href: '/loading.png' }]],
+  lang: 'zh-CN',
   title: "思考，快与慢",
   description: "思考，快与慢",
+  cleanUrls: true,
+  lastUpdated: false,
+  locales: {
+    root: {
+      label: '中文',
+      lang: 'cn'
+    }
+  },
   themeConfig: {
+    logo: '/loading.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
@@ -14,9 +25,16 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '导航',
+        text: '关于',
+        collapsed: false,
         items: [
           { text: '关于', link: '/markdown-examples' },
+        ]
+      },
+      {
+        text: '思维',
+        collapsed: false,
+        items: [
           { text: '文章', link: '/api-examples' }
         ]
       }
