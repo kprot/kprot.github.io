@@ -4,8 +4,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   head: [['link', { rel: 'icon', href: '/loading.png' }]],
   lang: 'zh-CN',
-  title: "思考，快与慢",
-  description: "思考，快与慢",
+  title: "HONGSEN",
+  description: "",
   cleanUrls: true,
   lastUpdated: false,
   locales: {
@@ -15,33 +15,31 @@ export default defineConfig({
     }
   },
   themeConfig: {
-    logo: '/loading.png',
+    logo: '',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '主页', link: '/' },
-      { text: '关于', link: '/markdown-examples' },
-      { text: '文章', link: '/api-examples' }
+      { text: 'HOME', link: '/' },
     ],
 
     sidebar: [
-      {
-        text: '关于',
-        collapsed: false,
-        items: [
-          { text: '关于', link: '/markdown-examples' },
-        ]
-      },
-      {
-        text: '思维',
-        collapsed: false,
-        items: [
-          { text: '文章', link: '/api-examples' }
-        ]
-      }
+      // {
+      //   text: '关于',
+      //   collapsed: false,
+      //   items: [
+      //     { text: '关于', link: '/markdown-examples' },
+      //   ]
+      // },
+      // {
+      //   text: '思维',
+      //   collapsed: false,
+      //   items: [
+      //     { text: '文章', link: '/api-examples' }
+      //   ]
+      // }
     ],
     footer: {
-      message: '思考，快与慢',
-      copyright: 'Copyright © 2024 LHS'
+      message: '',
+      copyright: 'Copyright © 2025 HS'
     },
     search: {
       provider: 'local'
