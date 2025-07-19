@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Bunny
-      link: /rabbit-dance
+      link: /bunny
     # - theme: alt
     #   text: 文章
     #   link: /api-examples
