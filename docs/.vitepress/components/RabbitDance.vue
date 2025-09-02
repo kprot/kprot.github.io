@@ -28,6 +28,7 @@
   </div>
 </template>
 
+
 <style scoped>
 .rabbit-dance {
   display: flex;
