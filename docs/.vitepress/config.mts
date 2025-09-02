@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   head: [['link', { rel: 'icon', href: '/loading.png' }]],
   lang: 'zh-CN',
-  title: "HONGSEN",
+  title: "Creb",
   description: "",
   cleanUrls: true,
   lastUpdated: false,
@@ -18,28 +18,28 @@ export default defineConfig({
     logo: '',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'HOME', link: '/' },
+      { text: '主页', link: '/' },
     ],
 
     sidebar: [
-      // {
-      //   text: '关于',
-      //   collapsed: false,
-      //   items: [
-      //     { text: '关于', link: '/markdown-examples' },
-      //   ]
-      // },
-      // {
-      //   text: '思维',
-      //   collapsed: false,
-      //   items: [
-      //     { text: '文章', link: '/api-examples' }
-      //   ]
-      // }
+      {
+        text: '关于',
+        collapsed: false,
+        items: [
+          { text: '关于', link: '/markdown-examples' },
+        ]
+      },
+      {
+        text: '思维',
+        collapsed: false,
+        items: [
+          { text: '文章', link: '/api-examples' }
+        ]
+      }
     ],
     footer: {
       message: '',
-      copyright: 'Copyright © 2025 HS'
+      copyright: 'Copyright © 2025 creb.ai'
     },
     search: {
       provider: 'local'
