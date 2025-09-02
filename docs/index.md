@@ -15,6 +15,7 @@ hero:
     #   link: /api-examples
 
 # features:
+
 #   - title: 生活
 #     details: 你想要什么生活方式？
 #   - title: 事业
