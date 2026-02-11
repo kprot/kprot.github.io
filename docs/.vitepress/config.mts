@@ -19,16 +19,16 @@ export default defineConfig({
     ['meta', { name: 'keywords', content: 'AI教程,人工智能,机器学习,深度学习,大语言模型,ChatGPT,Python,神经网络,数据科学' }],
     ['meta', { name: 'author', content: 'creb.ai' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'AI 教程 | creb.ai' }],
+    ['meta', { property: 'og:title', content: 'CreB.ai - AI 学习平台' }],
     ['meta', { property: 'og:description', content: '系统化的人工智能学习资源，涵盖机器学习、深度学习、大语言模型等核心技术' }],
-    ['meta', { property: 'og:site_name', content: 'creb.ai' }],
+    ['meta', { property: 'og:site_name', content: 'CreB.ai' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'AI 教程 | creb.ai' }],
+    ['meta', { name: 'twitter:title', content: 'CreB.ai - AI 学习平台' }],
     ['meta', { name: 'twitter:description', content: '系统化的人工智能学习资源，涵盖机器学习、深度学习、大语言模型等核心技术' }],
     ['link', { rel: 'canonical', href: 'https://creb.ai' }]
   ],
   lang: 'zh-CN',
-  title: "AI 教程 | creb.ai",
+  title: "CreB.ai",
   description: "系统化的人工智能学习资源，涵盖机器学习、深度学习、大语言模型、ChatGPT 等核心技术，提供完整代码示例和实战项目",
   
   // 启用 sitemap
@@ -147,10 +147,6 @@ export default defineConfig({
       ]
     },
 
-    footer: {
-      copyright: 'Copyright © 2026 creb.ai'
-    },
-    
     search: {
       provider: 'local',
       options: {
