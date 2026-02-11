@@ -7,6 +7,7 @@ import AINewsDirectory from '../components/AINewsDirectory.vue'
 import LearningCenter from '../components/LearningCenter.vue'
 import ComingSoon from '../components/ComingSoon.vue'
 import CompanyHomePage from '../components/CompanyHomePage.vue'
+import './custom.css'
 
 export default {
   extends: DefaultTheme,

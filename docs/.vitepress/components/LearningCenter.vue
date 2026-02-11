@@ -7,7 +7,7 @@
       
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-number">5</span>
+          <span class="stat-number">6</span>
           <span class="stat-label">学习路径</span>
         </div>
         <div class="stat-item">
@@ -131,6 +131,17 @@ const learningPaths = [
     topics: ['LLM 原理', '提示工程', 'RAG', '微调技术'],
     link: '/llm/introduction',
     color: '#a8edea'
+  },
+  {
+    id: 'ollama',
+    icon: '🦙',
+    title: 'Ollama 实战',
+    description: '学习使用 Ollama 在本地运行大语言模型，深入理解其架构设计',
+    level: '实战',
+    duration: '2-3 周',
+    topics: ['本地部署', 'API 使用', '架构设计', '性能优化'],
+    link: '/ollama/',
+    color: '#43e97b'
   },
   {
     id: 'projects',

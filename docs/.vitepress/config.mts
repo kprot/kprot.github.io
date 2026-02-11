@@ -83,7 +83,8 @@ export default defineConfig({
             { text: '什么是人工智能', link: '/basics/what-is-ai' },
             { text: 'AI 发展历史', link: '/basics/history' },
             { text: 'AI 应用场景', link: '/basics/applications' },
-            { text: '数学基础', link: '/basics/math-foundation' }
+            { text: '数学基础', link: '/basics/math-foundation' },
+            { text: '全栈工程师转型AI指南', link: '/basics/fullstack-to-ai-career' }
           ]
         }
       ],
@@ -122,6 +123,8 @@ export default defineConfig({
           items: [
             { text: '返回学习中心', link: '/learn/' },
             { text: 'LLM 简介', link: '/llm/introduction' },
+            { text: '理解模型参数量', link: '/llm/model-parameters' },
+            { text: '数据标注与模型微调', link: '/llm/data-annotation-and-finetuning' },
             { text: 'GPT 系列', link: '/llm/gpt' },
             { text: 'Claude 与其他模型', link: '/llm/claude' },
             { text: '提示工程', link: '/llm/prompt-engineering' },
@@ -137,11 +140,20 @@ export default defineConfig({
           items: [
             { text: 'AI 工具大全', link: '/tools/ai-tools-directory' },
             { text: 'ChatGPT 使用指南', link: '/tools/chatgpt' },
-            { text: 'Ollama 本地运行', link: '/tools/ollama' },
             { text: 'Midjourney 绘画', link: '/tools/midjourney' },
             { text: 'Stable Diffusion', link: '/tools/stable-diffusion' },
             { text: 'AI 编程助手', link: '/tools/coding-assistants' },
             { text: '其他实用工具', link: '/tools/other-tools' }
+          ]
+        }
+      ],
+      '/ollama/': [
+        {
+          text: 'Ollama 实战教程',
+          collapsed: false,
+          items: [
+            { text: '快速开始', link: '/ollama/' },
+            { text: '架构设计深度解析', link: '/ollama/architecture' }
           ]
         }
       ],

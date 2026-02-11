@@ -1,6 +1,5 @@
 <template>
   <div class="coming-soon">
-    <div class="icon">🚀</div>
     <h1 class="title">精彩即将呈现</h1>
     <p class="description">
       我们正在打造创新的 AI 产品和服务，致力于让人工智能技术更易用、更强大。
@@ -19,12 +18,6 @@
         <div class="feature-icon">🛠️</div>
         <h3 class="feature-title">开发工具</h3>
         <p class="feature-desc">提升开发效率的工具集</p>
-      </div>
-      
-      <div class="feature-item">
-        <div class="feature-icon">☁️</div>
-        <h3 class="feature-title">云服务</h3>
-        <p class="feature-desc">稳定可靠的云端服务</p>
       </div>
     </div>
 

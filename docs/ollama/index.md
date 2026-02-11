@@ -1,5 +1,13 @@
 # Ollama - 本地运行大语言模型
 
+::: tip 🎓 AI 学习中心 / Ollama 实战
+你正在学习 [AI 学习中心](/learn/) 的 **Ollama 实战** 课程
+:::
+
+::: info 🏗️ 深入学习
+想要深入了解 Ollama 的内部实现？查看 [架构设计深度解析](/ollama/architecture)
+:::
+
 ## 什么是 Ollama？
 
 Ollama 是一个开源平台，让你能够在本地机器上轻松运行和管理大语言模型（LLM）。它将模型权重、配置和数据打包成单一的 Modelfile 包，提供简单易用的命令行工具、REST API 和多语言 SDK。
