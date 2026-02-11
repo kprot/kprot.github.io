@@ -2,6 +2,34 @@
   <footer class="custom-footer">
     <div class="footer-container">
       <div class="footer-grid">
+        <!-- 公司信息 -->
+        <div class="footer-column">
+          <div class="footer-logo-wrapper">
+            <img src="/logo.png" alt="CreB.ai" class="footer-logo" />
+          </div>
+          <h4 class="footer-brand">CreB.ai</h4>
+          <p class="footer-tagline">让 AI 触手可及</p>
+          <p class="footer-desc">创新的人工智能产品与服务</p>
+        </div>
+        
+        <!-- 产品与服务 -->
+        <div class="footer-column">
+          <h4>产品与服务</h4>
+          <ul>
+            <li><a href="/products/coming-soon">即将推出</a></li>
+          </ul>
+        </div>
+        
+        <!-- 资源中心 -->
+        <div class="footer-column">
+          <h4>资源中心</h4>
+          <ul>
+            <li><a href="/learn/">AI 学习</a></li>
+            <li><a href="/tools/ai-tools-directory">AI 工具</a></li>
+            <li><a href="/news/index">AI 前沿</a></li>
+          </ul>
+        </div>
+        
         <!-- 关于 -->
         <div class="footer-column">
           <h4>关于</h4>
@@ -10,43 +38,9 @@
             <li><a href="https://creb.ai" target="_blank">官方网站</a></li>
           </ul>
         </div>
-        
-        <!-- 学习资源 -->
-        <div class="footer-column">
-          <h4>学习资源</h4>
-          <ul>
-            <li><a href="/basics/what-is-ai">AI 基础</a></li>
-            <li><a href="/machine-learning/introduction">机器学习</a></li>
-            <li><a href="/deep-learning/neural-networks">深度学习</a></li>
-            <li><a href="/llm/introduction">大语言模型</a></li>
-          </ul>
-        </div>
-        
-        <!-- AI 工具 -->
-        <div class="footer-column">
-          <h4>AI 工具</h4>
-          <ul>
-            <li><a href="/tools/ai-tools-directory">工具大全</a></li>
-            <li><a href="/tools/chatgpt">ChatGPT</a></li>
-            <li><a href="/tools/midjourney">Midjourney</a></li>
-            <li><a href="/tools/coding-assistants">编程助手</a></li>
-          </ul>
-        </div>
-        
-        <!-- 实战项目 -->
-        <div class="footer-column">
-          <h4>实战项目</h4>
-          <ul>
-            <li><a href="/projects/overview">项目概览</a></li>
-            <li><a href="/projects/chatbot">聊天机器人</a></li>
-            <li><a href="/projects/image-classifier">图像分类器</a></li>
-            <li><a href="/projects/text-generation">文本生成</a></li>
-          </ul>
-        </div>
       </div>
       
       <div class="footer-bottom">
-        <p class="footer-message">系统化的人工智能学习平台</p>
         <p class="footer-copyright">Copyright © 2026 CreB.ai</p>
       </div>
     </div>
@@ -68,7 +62,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -78,6 +72,39 @@
   font-weight: 600;
   color: var(--vp-c-text-1);
   margin-bottom: 1rem;
+}
+
+.footer-logo-wrapper {
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: var(--vp-c-text-2);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-3);
+  line-height: 1.5;
 }
 
 .footer-column ul {
@@ -107,12 +134,6 @@
   border-top: 1px solid var(--vp-c-divider);
 }
 
-.footer-message {
-  color: var(--vp-c-text-2);
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
 .footer-copyright {
   color: var(--vp-c-text-3);
   font-size: 0.9rem;
@@ -120,14 +141,8 @@
 
 @media (max-width: 768px) {
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 </style>

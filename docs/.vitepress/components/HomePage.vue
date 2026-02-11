@@ -48,7 +48,7 @@
               <li>大语言模型与提示工程</li>
               <li>100+ 可运行代码示例</li>
             </ul>
-            <a href="/basics/what-is-ai" class="platform-link">
+            <a href="/learn/" class="platform-link">
               开始学习 →
             </a>
           </div>
@@ -123,7 +123,7 @@
         <h2 class="final-cta-title">开始你的 AI 学习之旅</h2>
         <p class="final-cta-desc">系统化的课程体系，丰富的实战项目，前沿的 AI 工具，助你从入门到精通</p>
         <div class="cta-buttons">
-          <a href="/basics/what-is-ai" class="cta-button primary">
+          <a href="/learn/" class="cta-button primary">
             立即开始学习 →
           </a>
           <a href="/tools/ai-tools-directory" class="cta-button secondary">

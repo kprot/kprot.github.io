@@ -3,6 +3,10 @@ import { h } from 'vue'
 import AIToolsDirectory from '../components/AIToolsDirectory.vue'
 import HomePage from '../components/HomePage.vue'
 import CustomFooter from '../components/CustomFooter.vue'
+import AINewsDirectory from '../components/AINewsDirectory.vue'
+import LearningCenter from '../components/LearningCenter.vue'
+import ComingSoon from '../components/ComingSoon.vue'
+import CompanyHomePage from '../components/CompanyHomePage.vue'
 
 export default {
   extends: DefaultTheme,
@@ -11,6 +15,10 @@ export default {
     app.component('AIToolsDirectory', AIToolsDirectory)
     app.component('HomePage', HomePage)
     app.component('CustomFooter', CustomFooter)
+    app.component('AINewsDirectory', AINewsDirectory)
+    app.component('LearningCenter', LearningCenter)
+    app.component('ComingSoon', ComingSoon)
+    app.component('CompanyHomePage', CompanyHomePage)
   },
   Layout() {
     return h(DefaultTheme.Layout, null, {

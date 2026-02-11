@@ -44,33 +44,42 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    logo: '/logo.png',
     
     nav: [
       { text: '首页', link: '/' },
-      { text: 'AI 基础', link: '/basics/what-is-ai' },
-      { text: '机器学习', link: '/machine-learning/introduction' },
-      { text: '深度学习', link: '/deep-learning/neural-networks' },
-      { text: '大语言模型', link: '/llm/introduction' },
       { 
-        text: 'AI 工具', 
+        text: '产品与服务', 
         items: [
-          { text: 'AI 工具大全', link: '/tools/ai-tools-directory' },
-          { text: 'ChatGPT 指南', link: '/tools/chatgpt' },
-          { text: 'Midjourney', link: '/tools/midjourney' },
-          { text: 'Stable Diffusion', link: '/tools/stable-diffusion' },
-          { text: '编程助手', link: '/tools/coding-assistants' },
-          { text: '其他工具', link: '/tools/other-tools' }
+          { text: '即将推出', link: '/products/coming-soon' }
         ]
       },
-      { text: '实战项目', link: '/projects/overview' }
+      { 
+        text: '资源中心', 
+        items: [
+          { text: 'AI 学习', link: '/learn/' },
+          { text: 'AI 工具', link: '/tools/ai-tools-directory' },
+          { text: 'AI 前沿', link: '/news/index' }
+        ]
+      },
+      { text: '关于我们', link: '/about' }
     ],
 
     sidebar: {
+      '/learn/': [
+        {
+          text: '学习路径',
+          items: [
+            { text: '学习中心首页', link: '/learn/' }
+          ]
+        }
+      ],
       '/basics/': [
         {
           text: 'AI 基础入门',
           collapsed: false,
           items: [
+            { text: '返回学习中心', link: '/learn/' },
             { text: '什么是人工智能', link: '/basics/what-is-ai' },
             { text: 'AI 发展历史', link: '/basics/history' },
             { text: 'AI 应用场景', link: '/basics/applications' },
@@ -83,6 +92,7 @@ export default defineConfig({
           text: '机器学习',
           collapsed: false,
           items: [
+            { text: '返回学习中心', link: '/learn/' },
             { text: '机器学习简介', link: '/machine-learning/introduction' },
             { text: '监督学习', link: '/machine-learning/supervised-learning' },
             { text: '无监督学习', link: '/machine-learning/unsupervised-learning' },
@@ -96,6 +106,7 @@ export default defineConfig({
           text: '深度学习',
           collapsed: false,
           items: [
+            { text: '返回学习中心', link: '/learn/' },
             { text: '神经网络基础', link: '/deep-learning/neural-networks' },
             { text: '卷积神经网络 (CNN)', link: '/deep-learning/cnn' },
             { text: '循环神经网络 (RNN)', link: '/deep-learning/rnn' },
@@ -109,6 +120,7 @@ export default defineConfig({
           text: '大语言模型',
           collapsed: false,
           items: [
+            { text: '返回学习中心', link: '/learn/' },
             { text: 'LLM 简介', link: '/llm/introduction' },
             { text: 'GPT 系列', link: '/llm/gpt' },
             { text: 'Claude 与其他模型', link: '/llm/claude' },
@@ -120,11 +132,12 @@ export default defineConfig({
       ],
       '/tools/': [
         {
-          text: 'AI 工具实战',
+          text: 'AI 工具',
           collapsed: false,
           items: [
             { text: 'AI 工具大全', link: '/tools/ai-tools-directory' },
             { text: 'ChatGPT 使用指南', link: '/tools/chatgpt' },
+            { text: 'Ollama 本地运行', link: '/tools/ollama' },
             { text: 'Midjourney 绘画', link: '/tools/midjourney' },
             { text: 'Stable Diffusion', link: '/tools/stable-diffusion' },
             { text: 'AI 编程助手', link: '/tools/coding-assistants' },
@@ -137,6 +150,7 @@ export default defineConfig({
           text: '实战项目',
           collapsed: false,
           items: [
+            { text: '返回学习中心', link: '/learn/' },
             { text: '项目概览', link: '/projects/overview' },
             { text: '图像分类器', link: '/projects/image-classifier' },
             { text: '聊天机器人', link: '/projects/chatbot' },
