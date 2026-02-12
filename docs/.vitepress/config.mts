@@ -2,6 +2,14 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  // 忽略死链检查（允许 localhost 等示例链接）
+  ignoreDeadLinks: [
+    // 忽略所有 localhost 链接
+    /^https?:\/\/localhost/,
+    // 忽略所有 127.0.0.1 链接
+    /^https?:\/\/127\.0\.0\.1/,
+  ],
+  
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
     // Google Analytics 4
