@@ -11,7 +11,7 @@ export default defineConfig({
   ],
   
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     // Google Analytics 4
     ['script', { 
       async: '', 
@@ -25,23 +25,23 @@ export default defineConfig({
     `],
     // SEO Meta Tags
     ['meta', { name: 'keywords', content: 'AI教程,人工智能,机器学习,深度学习,大语言模型,ChatGPT,Python,神经网络,数据科学' }],
-    ['meta', { name: 'author', content: 'creb.ai' }],
+    ['meta', { name: 'author', content: 'CreB' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'CreB.ai - AI 学习平台' }],
-    ['meta', { property: 'og:description', content: '系统化的人工智能学习资源，涵盖机器学习、深度学习、大语言模型等核心技术' }],
-    ['meta', { property: 'og:site_name', content: 'CreB.ai' }],
+    ['meta', { property: 'og:title', content: 'CreB — Creative Builder' }],
+    ['meta', { property: 'og:description', content: '我学 AI、造产品的笔记本。' }],
+    ['meta', { property: 'og:site_name', content: 'CreB' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'CreB.ai - AI 学习平台' }],
-    ['meta', { name: 'twitter:description', content: '系统化的人工智能学习资源，涵盖机器学习、深度学习、大语言模型等核心技术' }],
-    ['link', { rel: 'canonical', href: 'https://creb.ai' }]
+    ['meta', { name: 'twitter:title', content: 'CreB — Creative Builder' }],
+    ['meta', { name: 'twitter:description', content: '我学 AI、造产品的笔记本。' }],
+    ['link', { rel: 'canonical', href: 'https://lhsen.com' }]
   ],
   lang: 'zh-CN',
-  title: "CreB.ai",
-  description: "系统化的人工智能学习资源，涵盖机器学习、深度学习、大语言模型、ChatGPT 等核心技术，提供完整代码示例和实战项目",
+  title: "CreB",
+  description: "CreB（Creative Builder）—— 我学 AI、造产品的笔记本。",
   
   // 启用 sitemap
   sitemap: {
-    hostname: 'https://creb.ai'
+    hostname: 'https://lhsen.com'
   },
   cleanUrls: true,
   lastUpdated: true,
@@ -52,154 +52,14 @@ export default defineConfig({
     }
   },
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.svg',
     
     nav: [
-      { text: '首页', link: '/' },
-      { 
-        text: '产品与服务', 
-        items: [
-          { text: '即将推出', link: '/products/coming-soon' }
-        ]
-      },
-      { 
-        text: '资源中心', 
-        items: [
-          { text: 'AI 学习', link: '/learn/' },
-          { text: 'AI 工具', link: '/tools/ai-tools-directory' },
-          { text: 'AI 前沿', link: '/news/index' }
-        ]
-      },
-      { text: '关于我们', link: '/about' }
+      { text: '博客', link: '/posts/' },
+      { text: '在造的', link: '/products/coming-soon' },
+      { text: '关于', link: '/about' }
     ],
 
-    sidebar: {
-      '/learn/': [
-        {
-          text: '学习路径',
-          items: [
-            { text: '学习中心首页', link: '/learn/' }
-          ]
-        }
-      ],
-      '/basics/': [
-        {
-          text: 'AI 基础入门',
-          collapsed: false,
-          items: [
-            { text: '返回学习中心', link: '/learn/' },
-            { text: '什么是人工智能', link: '/basics/what-is-ai' },
-            { text: 'AI 发展历史', link: '/basics/history' },
-            { text: 'AI 应用场景', link: '/basics/applications' },
-            { text: '数学基础', link: '/basics/math-foundation' },
-            { text: '全栈工程师转型AI指南', link: '/basics/fullstack-to-ai-career' }
-          ]
-        }
-      ],
-      '/machine-learning/': [
-        {
-          text: '机器学习',
-          collapsed: false,
-          items: [
-            { text: '返回学习中心', link: '/learn/' },
-            { text: '机器学习简介', link: '/machine-learning/introduction' },
-            { text: '监督学习', link: '/machine-learning/supervised-learning' },
-            { text: '无监督学习', link: '/machine-learning/unsupervised-learning' },
-            { text: '强化学习', link: '/machine-learning/reinforcement-learning' },
-            { text: '常用算法', link: '/machine-learning/algorithms' }
-          ]
-        }
-      ],
-      '/deep-learning/': [
-        {
-          text: '深度学习',
-          collapsed: false,
-          items: [
-            { text: '返回学习中心', link: '/learn/' },
-            { text: '神经网络基础', link: '/deep-learning/neural-networks' },
-            { text: '卷积神经网络 (CNN)', link: '/deep-learning/cnn' },
-            { text: '循环神经网络 (RNN)', link: '/deep-learning/rnn' },
-            { text: 'Transformer 架构', link: '/deep-learning/transformer' },
-            { text: '训练技巧', link: '/deep-learning/training-tips' }
-          ]
-        }
-      ],
-      '/llm/': [
-        {
-          text: '大语言模型',
-          collapsed: false,
-          items: [
-            { text: '返回学习中心', link: '/learn/' },
-            { text: 'LLM 简介', link: '/llm/introduction' },
-            { text: '理解模型参数量', link: '/llm/model-parameters' },
-            { text: '数据标注与模型微调', link: '/llm/data-annotation-and-finetuning' },
-            { text: 'GPT 系列', link: '/llm/gpt' },
-            { text: 'Claude 与其他模型', link: '/llm/claude' },
-            { text: '提示工程', link: '/llm/prompt-engineering' },
-            { text: 'RAG 技术', link: '/llm/rag' },
-            { text: '微调与训练', link: '/llm/fine-tuning' }
-          ]
-        }
-      ],
-      '/tools/': [
-        {
-          text: 'AI 工具',
-          collapsed: false,
-          items: [
-            { text: 'AI 工具大全', link: '/tools/ai-tools-directory' },
-            { text: 'ChatGPT 使用指南', link: '/tools/chatgpt' },
-            { text: 'Midjourney 绘画', link: '/tools/midjourney' },
-            { text: 'Stable Diffusion', link: '/tools/stable-diffusion' },
-            { text: 'AI 编程助手', link: '/tools/coding-assistants' },
-            { text: '其他实用工具', link: '/tools/other-tools' }
-          ]
-        }
-      ],
-      '/ollama/': [
-        {
-          text: 'Ollama 实战教程',
-          collapsed: false,
-          items: [
-            { text: '快速开始', link: '/ollama/' },
-            { text: '架构设计深度解析', link: '/ollama/architecture' }
-          ]
-        }
-      ],
-      '/projects/': [
-        {
-          text: '实战项目',
-          collapsed: false,
-          items: [
-            { text: '返回学习中心', link: '/learn/' },
-            { text: '项目概览', link: '/projects/overview' },
-            { text: '图像分类器', link: '/projects/image-classifier' },
-            { text: '聊天机器人', link: '/projects/chatbot' },
-            { text: '文本生成应用', link: '/projects/text-generation' },
-            { text: '推荐系统', link: '/projects/recommendation-system' }
-          ]
-        }
-      ]
-    },
-
-    search: {
-      provider: 'local',
-      options: {
-        translations: {
-          button: {
-            buttonText: '搜索教程',
-            buttonAriaLabel: '搜索教程'
-          },
-          modal: {
-            noResultsText: '无法找到相关结果',
-            resetButtonTitle: '清除查询条件',
-            footer: {
-              selectText: '选择',
-              navigateText: '切换'
-            }
-          }
-        }
-      }
-    },
 
     outline: {
       label: '本页目录',

@@ -1,10 +1,10 @@
 <template>
   <div class="coming-soon">
-    <h1 class="title">精彩即将呈现</h1>
+    <h1 class="title">我正在造的东西</h1>
     <p class="description">
-      我们正在打造创新的 AI 产品和服务，致力于让人工智能技术更易用、更强大。
+      我在用 AI 做一些真实的产品和小工具，过程、踩坑与思考都会摊开来写——build in public。
       <br>
-      敬请期待我们即将推出的产品！
+      还在打磨中，很快和你见面。
     </p>
 
     <div class="features">
@@ -22,9 +22,9 @@
     </div>
 
     <div class="cta-section">
-      <h2 class="cta-title">想了解更多？</h2>
-      <p class="cta-desc">在产品正式发布前，欢迎先探索我们的 AI 学习资源和工具</p>
-      <a href="/learn/" class="cta-button">开始学习 AI</a>
+      <h2 class="cta-title">在此之前</h2>
+      <p class="cta-desc">可以先逛逛我的 AI 学习笔记和实测过的工具</p>
+      <a href="/learn/" class="cta-button">进来逛逛</a>
     </div>
   </div>
 </template>

@@ -1,25 +1,19 @@
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
-import AIToolsDirectory from '../components/AIToolsDirectory.vue'
-import HomePage from '../components/HomePage.vue'
 import CustomFooter from '../components/CustomFooter.vue'
-import AINewsDirectory from '../components/AINewsDirectory.vue'
-import LearningCenter from '../components/LearningCenter.vue'
+import PostList from '../components/PostList.vue'
 import ComingSoon from '../components/ComingSoon.vue'
-import CompanyHomePage from '../components/CompanyHomePage.vue'
+import Stances from '../components/Stances.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     // 注册全局组件
-    app.component('AIToolsDirectory', AIToolsDirectory)
-    app.component('HomePage', HomePage)
     app.component('CustomFooter', CustomFooter)
-    app.component('AINewsDirectory', AINewsDirectory)
-    app.component('LearningCenter', LearningCenter)
+    app.component('PostList', PostList)
     app.component('ComingSoon', ComingSoon)
-    app.component('CompanyHomePage', CompanyHomePage)
+    app.component('Stances', Stances)
   },
   Layout() {
     return h(DefaultTheme.Layout, null, {
@@ -28,18 +22,14 @@ export default {
         type: 'application/ld+json',
         innerHTML: JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'EducationalOrganization',
-          name: 'CreB.ai',
-          description: '系统化的人工智能学习资源',
-          url: 'https://creb.ai',
-          sameAs: [
-            'https://github.com/yourusername/repo'
-          ],
-          offers: {
-            '@type': 'Offer',
-            category: 'Education',
-            price: '0',
-            priceCurrency: 'CNY'
+          '@type': 'WebSite',
+          name: 'CreB',
+          description: 'CreB（Creative Builder）—— 我学 AI、造产品的笔记本。',
+          url: 'https://lhsen.com',
+          author: {
+            '@type': 'Person',
+            name: 'CreB',
+            url: 'https://lhsen.com'
           }
         })
       })
