@@ -24,20 +24,20 @@ export default defineConfig({
       gtag('config', 'G-35F4M5E22Q');
     `],
     // SEO Meta Tags
-    ['meta', { name: 'keywords', content: 'AI教程,人工智能,机器学习,深度学习,大语言模型,ChatGPT,Python,神经网络,数据科学' }],
-    ['meta', { name: 'author', content: 'CreB' }],
+    ['meta', { name: 'keywords', content: '鴻森,Hongsen,AI,独立开发,做产品,个人博客,思考' }],
+    ['meta', { name: 'author', content: '鴻森' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'CreB — Creative Builder' }],
+    ['meta', { property: 'og:title', content: '鴻森' }],
     ['meta', { property: 'og:description', content: '我学 AI、造产品的笔记本。' }],
-    ['meta', { property: 'og:site_name', content: 'CreB' }],
+    ['meta', { property: 'og:site_name', content: '鴻森' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'CreB — Creative Builder' }],
+    ['meta', { name: 'twitter:title', content: '鴻森' }],
     ['meta', { name: 'twitter:description', content: '我学 AI、造产品的笔记本。' }],
     ['link', { rel: 'canonical', href: 'https://lhsen.com' }]
   ],
   lang: 'zh-CN',
-  title: "CreB",
-  description: "CreB（Creative Builder）—— 我学 AI、造产品的笔记本。",
+  title: "鴻森",
+  description: "鴻森 —— 我学 AI、造产品的笔记本。",
   
   // 启用 sitemap
   sitemap: {
@@ -53,10 +53,10 @@ export default defineConfig({
   },
   themeConfig: {
     logo: '/logo.svg',
+    siteTitle: false,
     
     nav: [
       { text: '博客', link: '/posts/' },
-      { text: '在造的', link: '/products/coming-soon' },
       { text: '关于', link: '/about' }
     ],
 

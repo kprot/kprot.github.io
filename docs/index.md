@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  text: "Creative Builder"
+  text: "鴻森"
   tagline: 我学 AI、造产品的笔记本。
   actions:
     - theme: brand
