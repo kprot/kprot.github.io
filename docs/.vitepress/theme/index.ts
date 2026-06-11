@@ -2,6 +2,8 @@ import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import CustomFooter from '../components/CustomFooter.vue'
 import PostList from '../components/PostList.vue'
+import NotesList from '../components/NotesList.vue'
+import HomeTabs from '../components/HomeTabs.vue'
 import './custom.css'
 
 export default {
@@ -10,6 +12,8 @@ export default {
     // 注册全局组件
     app.component('CustomFooter', CustomFooter)
     app.component('PostList', PostList)
+    app.component('NotesList', NotesList)
+    app.component('HomeTabs', HomeTabs)
   },
   Layout() {
     return h(DefaultTheme.Layout, null, {
@@ -19,12 +23,12 @@ export default {
         innerHTML: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: '鴻森',
-          description: '鴻森 —— 我学 AI、造产品的笔记本。',
+          name: 'HSEN',
+          description: 'HSEN —— 我学 AI、造产品的笔记本。',
           url: 'https://lhsen.com',
           author: {
             '@type': 'Person',
-            name: '鴻森',
+            name: 'HSEN',
             url: 'https://lhsen.com'
           }
         })

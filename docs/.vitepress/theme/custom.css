@@ -1,44 +1,18 @@
-/* 自定义侧边栏宽度 */
+/* ===== 整体布局：博客式收拢，不要文档站那么宽 ===== */
 :root {
-  /* 减小左侧边栏宽度 */
-  --vp-sidebar-width: 260px;
-  
-  /* 增加右侧目录宽度 */
-  --vp-aside-width: 280px;
-  
-  /* 增加内容区域最大宽度 */
-  --vp-layout-max-width: 1600px;
+  --vp-layout-max-width: 1140px;
+  --vp-aside-width: 240px;
 }
 
-/* 响应式调整 */
-@media (min-width: 1440px) {
-  :root {
-    --vp-sidebar-width: 270px;
-    --vp-aside-width: 300px;
-    --vp-layout-max-width: 1680px;
-  }
-}
-
-@media (min-width: 1920px) {
-  :root {
-    --vp-sidebar-width: 280px;
-    --vp-aside-width: 320px;
-    --vp-layout-max-width: 1760px;
-  }
-}
-
-/* 修复侧边栏遮挡 footer 的问题 */
+/* footer / sidebar 层级修复 */
 .VPSidebar,
 .vp-sidebar {
   z-index: 1 !important;
 }
-
 .VPDocAside,
 .vp-doc aside {
   z-index: 1 !important;
 }
-
-/* 确保 footer 在最上层 */
 .VPFooter,
 footer,
 .custom-footer {
@@ -46,106 +20,73 @@ footer,
   position: relative !important;
 }
 
-/* 增加中间内容区域宽度 */
-.vp-doc .container,
-.VPDoc .container {
-  max-width: 920px !important;
+/* ===== 阅读版式：像读一篇文章 / 一本书 ===== */
+
+/* 正文列宽：中文每行约 36–40 字最舒服 */
+.VPDoc .content-container {
+  max-width: 720px !important;
 }
 
-@media (min-width: 1440px) {
-  .vp-doc .container,
-  .VPDoc .container {
-    max-width: 1000px !important;
-  }
-}
-
-@media (min-width: 1920px) {
-  .vp-doc .container,
-  .VPDoc .container {
-    max-width: 1100px !important;
-  }
-}
-
-/* 让文字更紧凑 */
+/* 正文字号 / 行高 / 段间距（不首行缩进，用段间距分隔——屏幕阅读最佳实践） */
 .vp-doc p,
 .vp-doc li {
-  line-height: 1.6 !important;
-  margin: 0.8em 0 !important;
+  font-size: 17px !important;
+  line-height: 1.85 !important;
+  margin: 1.1em 0 !important;
+  letter-spacing: 0.01em;
 }
 
+/* 标题层次：与正文拉开留白 */
+.vp-doc h1 {
+  font-size: 2rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 1.5rem !important;
+}
 .vp-doc h2 {
-  margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
+  font-size: 1.4rem !important;
+  margin-top: 2.6rem !important;
+  margin-bottom: 1.1rem !important;
+  padding-top: 1.6rem !important;
 }
-
 .vp-doc h3 {
-  margin-top: 1.5rem !important;
+  font-size: 1.15rem !important;
+  margin-top: 1.8rem !important;
   margin-bottom: 0.8rem !important;
 }
 
-.vp-doc h4 {
-  margin-top: 1.2rem !important;
-  margin-bottom: 0.6rem !important;
+/* 首段（描述）稍微提亮，作为引子 */
+.vp-doc h1 + p {
+  font-size: 1.05rem !important;
+  color: var(--vp-c-text-2) !important;
 }
 
-/* 代码块间距 */
+/* 代码块 / 列表间距 */
 .vp-doc div[class*='language-'] {
-  margin: 1rem 0 !important;
+  margin: 1.2rem 0 !important;
 }
-
-/* 列表间距 */
 .vp-doc ul,
 .vp-doc ol {
-  margin: 0.8em 0 !important;
-  padding-left: 1.5em !important;
+  margin: 1em 0 !important;
+  padding-left: 1.4em !important;
 }
 
-/* 优化右侧目录文字显示 */
-.VPDocAside .outline-link,
-.vp-doc aside .outline-link,
+/* 右侧目录可读性 */
 .VPDocAsideOutline .outline-link {
   line-height: 1.5 !important;
   padding: 6px 0 !important;
-  word-break: break-word !important;
   white-space: normal !important;
   overflow-wrap: break-word !important;
-  hyphens: auto !important;
 }
 
-/* 确保目录容器有足够宽度 */
-.VPDocAside,
-.vp-doc aside,
-.VPDocAsideOutline {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-/* 目录标题样式 */
-.VPDocAsideOutline .outline-title,
-.vp-doc aside .outline-title {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* 确保目录项不会被截断 */
-.outline-link {
-  display: block !important;
-  text-overflow: clip !important;
-}
-
-/* ===== CreB 品牌色：统一到记忆/突触紫渐变 ===== */
+/* ===== HSEN 品牌色：紫渐变 ===== */
 :root {
   --vp-c-brand-1: #6a5acd;
   --vp-c-brand-2: #764ba2;
   --vp-c-brand-3: #667eea;
   --vp-c-brand-soft: rgba(118, 75, 162, 0.14);
 
-  /* Hero 标题渐变 */
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  /* Hero 品牌图标光晕 */
-  --vp-home-hero-image-background-image: linear-gradient(135deg, #667eea 30%, #764ba2 70%);
-  --vp-home-hero-image-filter: blur(56px);
 }
 
 .dark {

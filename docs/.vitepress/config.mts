@@ -24,20 +24,20 @@ export default defineConfig({
       gtag('config', 'G-35F4M5E22Q');
     `],
     // SEO Meta Tags
-    ['meta', { name: 'keywords', content: '鴻森,Hongsen,AI,独立开发,做产品,个人博客,思考' }],
-    ['meta', { name: 'author', content: '鴻森' }],
+    ['meta', { name: 'keywords', content: 'HSEN,Hongsen,AI,独立开发,做产品,个人博客,思考' }],
+    ['meta', { name: 'author', content: 'HSEN' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: '鴻森' }],
+    ['meta', { property: 'og:title', content: 'HSEN' }],
     ['meta', { property: 'og:description', content: '我学 AI、造产品的笔记本。' }],
-    ['meta', { property: 'og:site_name', content: '鴻森' }],
+    ['meta', { property: 'og:site_name', content: 'HSEN' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: '鴻森' }],
+    ['meta', { name: 'twitter:title', content: 'HSEN' }],
     ['meta', { name: 'twitter:description', content: '我学 AI、造产品的笔记本。' }],
     ['link', { rel: 'canonical', href: 'https://lhsen.com' }]
   ],
   lang: 'zh-CN',
-  title: "鴻森",
-  description: "鴻森 —— 我学 AI、造产品的笔记本。",
+  title: "HSEN",
+  description: "HSEN —— 我学 AI、造产品的笔记本。",
   
   // 启用 sitemap
   sitemap: {
@@ -53,11 +53,11 @@ export default defineConfig({
   },
   themeConfig: {
     logo: '/logo.svg',
-    siteTitle: false,
+    siteTitle: 'HSEN',
     
     nav: [
-      { text: '博客', link: '/posts/' },
-      { text: '关于', link: '/about' }
+      { text: '文章', link: '/posts/' },
+      { text: '碎念', link: '/notes/' }
     ],
 
 

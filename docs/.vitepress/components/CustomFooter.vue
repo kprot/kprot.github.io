@@ -1,7 +1,7 @@
 <template>
   <footer class="custom-footer">
     <div class="footer-inner">
-      <div class="footer-copyright">© 2026 HONGSEN</div>
+      <div class="footer-copyright">© 2026 HSEN</div>
     </div>
   </footer>
 </template>

@@ -1,10 +1,8 @@
 ---
-title: 博客
+title: 文章
 aside: false
 ---
 
-# 博客
-
-我学 AI、造产品时记下来的东西。按时间倒序。
+# 文章
 
 <PostList />
