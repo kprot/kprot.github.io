@@ -1,117 +1,70 @@
-# AI 教程网站 | creb.ai
+# HSEN · 鴻森
 
-> 系统化的人工智能学习资源，涵盖机器学习、深度学习、大语言模型等核心技术
+> 我学 AI、造产品的笔记本。线上地址：https://lhsen.com
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/repo?style=social)](https://github.com/yourusername/repo)
+基于 VitePress 的个人博客，两个板块：
 
-## 🎯 项目简介
+- **文章** (`docs/posts/`)：长文
+- **碎念** (`docs/notes/`)：流水账式短记
 
-这是一个基于 VitePress 构建的 AI 教程网站，提供：
-
-- 📚 系统的 AI 知识体系
-- 💻 丰富的代码示例
-- 🚀 实战项目指导
-- 🔍 搜索功能支持
-
-**网站地址**: https://creb.ai
-
-## 📖 内容结构
-
-### AI 基础入门
-- 什么是人工智能
-- AI 发展历史
-- AI 应用场景
-- 数学基础
-
-### 机器学习
-- 机器学习简介
-- 监督学习
-- 无监督学习
-- 强化学习
-- 常用算法
-
-### 深度学习
-- 神经网络基础
-- 卷积神经网络 (CNN)
-- 循环神经网络 (RNN)
-- Transformer 架构
-- 训练技巧
-
-### 大语言模型
-- LLM 简介
-- GPT 系列
-- Claude 与其他模型
-- 提示工程
-- RAG 技术
-- 微调与训练
-
-### AI 工具实战
-- ChatGPT 使用指南
-- Midjourney 绘画
-- Stable Diffusion
-- AI 编程助手
-- 其他实用工具
-
-### 实战项目
-- 项目概览
-- 图像分类器
-- 聊天机器人
-- 文本生成应用
-- 推荐系统
-
-## 🚀 快速开始
-
-### 安装依赖
+## 本地开发
 
 ```bash
 npm install
+npm run docs:dev      # 本地预览，http://localhost:5173
+npm run docs:build    # 生产构建（产物含 CNAME → lhsen.com）
+npm run docs:preview  # 预览构建结果
 ```
 
-### 本地开发
+> ⚠️ 起 dev server 时如果用后台方式，务必让它作为独立持久进程运行，
+> 不要塞进"一次性命令 + &"里——否则命令一返回进程就被回收，
+> 表现为端口像在监听、但请求挂死/拒绝。改了 `*.data.mts` 内容加载器后需重启 dev 才生效。
 
-```bash
-npm run docs:dev
+## 写文章
+
+在 `docs/posts/` 下新建 `.md`，frontmatter：
+
+```yaml
+---
+title: 文章标题
+date: 2026-06-12
+description: 列表里显示的摘要
+---
 ```
 
-访问 http://localhost:5173
+碎念在 `docs/notes/` 下新建 `.md`，只需 `date`，正文即内容（无标题）。
 
-### 构建部署
+## 草稿工作流
 
-```bash
-npm run docs:build
+给任意文章/碎念加一行 `draft: true`：
+
+```yaml
+---
+title: 还没写完
+date: 2026-06-12
+draft: true        # ← 草稿开关
+---
 ```
 
-### 预览构建结果
+效果：
 
-```bash
-npm run docs:preview
-```
+| 环境 | 列表里 | 文章页 |
+|------|--------|--------|
+| 本地 `docs:dev` | 显示，标题旁有置灰「草稿」标签 | 顶部有置灰提示条 |
+| 生产 `docs:build` / 线上 | **隐藏**（不进列表） | 标记不渲染 |
 
-## 🛠️ 技术栈
+- 判定靠 `process.env.NODE_ENV`（VitePress 自动设置，无需手动配）。
+- 定稿后删掉 `draft: true` 这行即发布。
+- 注意：草稿页面在生产仍会被构建成一个**无链接的孤儿 URL**（列表/导航/搜索都不指向它，但知道地址能直达）。绝对保密的内容别用此法。
 
-- [VitePress](https://vitepress.dev/) - 静态网站生成器
-- Vue 3 - 前端框架
-- Markdown - 内容编写
+相关实现：
+- `docs/.vitepress/theme/posts.data.mts` / `notes.data.mts` — 生产构建过滤 draft
+- `docs/.vitepress/components/PostList.vue` — 置灰草稿标签
+- `docs/.vitepress/components/DraftBanner.vue` — 文章页草稿提示条（仅 dev）
 
-## 📝 贡献指南
+## 技术栈
 
-欢迎贡献内容！
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证
-
-## 📧 联系方式
-
-- 网站：https://creb.ai
+VitePress · Vue 3 · Markdown · GitHub Pages
 
 ---
-
-Copyright © 2026 creb.ai
+Copyright © 2026 HSEN
