@@ -22,11 +22,15 @@ function formatDate(raw: string): Note['date'] {
   }
 }
 
+// 生产构建时隐藏草稿；本地 dev 仍然显示，方便预览
+const isProd = process.env.NODE_ENV === 'production'
+
 export default createContentLoader('notes/*.md', {
   render: true,
   transform(raw): Note[] {
     return raw
-      .filter(({ url }) => url !== '/notes/' && url !== '/notes')
+      .filter(({ url, frontmatter }) =>
+        url !== '/notes/' && url !== '/notes' && (!isProd || !frontmatter.draft))
       .map(({ url, frontmatter, html }) => ({
         url,
         html: html || '',

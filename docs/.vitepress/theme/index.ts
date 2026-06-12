@@ -4,6 +4,7 @@ import CustomFooter from '../components/CustomFooter.vue'
 import PostList from '../components/PostList.vue'
 import NotesList from '../components/NotesList.vue'
 import HomeTabs from '../components/HomeTabs.vue'
+import DraftBanner from '../components/DraftBanner.vue'
 import './custom.css'
 
 export default {
@@ -14,9 +15,11 @@ export default {
     app.component('PostList', PostList)
     app.component('NotesList', NotesList)
     app.component('HomeTabs', HomeTabs)
+    app.component('DraftBanner', DraftBanner)
   },
   Layout() {
     return h(DefaultTheme.Layout, null, {
+      'doc-before': () => h(DraftBanner),
       'layout-bottom': () => h(CustomFooter),
       'layout-top': () => h('script', {
         type: 'application/ld+json',

@@ -5,6 +5,7 @@ export interface Post {
   url: string
   date: { time: number; string: string }
   excerpt: string | undefined
+  draft?: boolean
 }
 
 declare const data: Post[]
@@ -23,14 +24,19 @@ function formatDate(raw: string): Post['date'] {
   }
 }
 
+// 生产构建时隐藏草稿；本地 dev 仍然显示，方便预览
+const isProd = process.env.NODE_ENV === 'production'
+
 export default createContentLoader('posts/*.md', {
   transform(raw): Post[] {
     return raw
-      .filter(({ url }) => url !== '/posts/' && url !== '/posts')
+      .filter(({ url, frontmatter }) =>
+        url !== '/posts/' && url !== '/posts' && (!isProd || !frontmatter.draft))
       .map(({ url, frontmatter }) => ({
         title: frontmatter.title,
         url,
         excerpt: frontmatter.description,
+        draft: !!frontmatter.draft,
         date: formatDate(frontmatter.date)
       }))
       .sort((a, b) => b.date.time - a.date.time)

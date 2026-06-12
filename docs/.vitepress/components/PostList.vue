@@ -12,7 +12,7 @@ const posts = computed(() =>
   <ul class="post-list">
     <li v-for="post of posts" :key="post.url" class="post-item">
       <a :href="post.url" class="post-link">
-        <span class="post-title">{{ post.title }}</span>
+        <span class="post-title">{{ post.title }}<span v-if="post.draft" class="post-draft-badge">草稿</span></span>
         <time class="post-date">{{ post.date.string }}</time>
       </a>
       <p v-if="post.excerpt" class="post-excerpt">{{ post.excerpt }}</p>
@@ -47,6 +47,18 @@ const posts = computed(() =>
 }
 .post-link:hover .post-title {
   color: var(--vp-c-brand-1);
+}
+.post-draft-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--vp-c-text-3);
+  background: var(--vp-c-default-soft);
+  border-radius: 4px;
+  vertical-align: middle;
 }
 .post-date {
   flex-shrink: 0;
